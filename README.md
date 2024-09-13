@@ -20,7 +20,7 @@ Download links: ([Market-1501](https://drive.google.com/file/d/0B8-rUzbwVRk0c054
 Change the path to the dataset root by modifying `DATASETS.ROOT_DIR` in the corresponding config file located in the `configs` directory.
 ## Model Weights
 You can find model weights in following repositories:
-- **BOT**: [BoT](https://github.com/michuanhaohao/reid-strong-baseline)
+- **BoT**: [BoT](https://github.com/michuanhaohao/reid-strong-baseline)
 - **CLIP-ReID**: [CLIP-ReID](https://github.com/Syliz517/CLIP-ReID/tree/master)
 
 Change the path to the model weights by modifying the `TEST.WEIGHT` in the corresponding configuration file in the `configs` directory. For example, in `configs/market1501.yml`, update the following line:

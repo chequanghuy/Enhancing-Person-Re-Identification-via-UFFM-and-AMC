@@ -1,8 +1,5 @@
 # encoding: utf-8
-"""
-@base:  sherlock
-@contact: sherlockliao01@gmail.com
-"""
+
 import logging
 
 import torch

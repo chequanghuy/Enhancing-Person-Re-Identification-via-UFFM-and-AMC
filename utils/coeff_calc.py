@@ -1,8 +1,5 @@
 # encoding: utf-8
-"""
-@author:  liaoxingyu
-@contact: sherlockliao01@gmail.com
-"""
+
 import math
 import numpy as np
 import torch
