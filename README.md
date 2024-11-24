@@ -59,15 +59,18 @@ Codebase from [BoT](https://github.com/michuanhaohao/reid-strong-baseline) and [
 If you use this code for your research, please cite
 
 ```ref
-@misc{che2024enhancingpersonreidentificationuncertainty,
-      title={Enhancing Person Re-Identification via Uncertainty Feature Fusion and Auto-weighted Measure Combination}, 
-      author={Quang-Huy Che and Le-Chuong Nguyen and Vinh-Tiep Nguyen},
-      year={2024},
-      eprint={2405.01101},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2405.01101}, 
+@article{CHE2025112737,
+title = {Enhancing person re-identification via Uncertainty Feature Fusion Method and Auto-weighted Measure Combination},
+journal = {Knowledge-Based Systems},
+volume = {307},
+pages = {112737},
+year = {2025},
+issn = {0950-7051},
+doi = {https://doi.org/10.1016/j.knosys.2024.112737},
+url = {https://www.sciencedirect.com/science/article/pii/S0950705124013716},
+author = {Quang-Huy Che and Le-Chuong Nguyen and Duc-Tuan Luu and Vinh-Tiep Nguyen}
 }
+
 ```
   
 
