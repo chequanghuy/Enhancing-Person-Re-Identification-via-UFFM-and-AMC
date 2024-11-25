@@ -14,6 +14,11 @@ And other additional dependencies and version requirements:
 pip install -r requirements.txt
 ```
 
+Compile with cython to accelerate evalution:
+```bash
+cd utils/rank_cylib; make all
+```
+
 ## Datasets
 Download links: ([Market-1501](https://drive.google.com/file/d/0B8-rUzbwVRk0c054eEozWG9COHM/view), [MSMT17](https://arxiv.org/abs/1711.08565), [DukeMTMC-reID](https://arxiv.org/abs/1609.01775))
 
@@ -53,7 +58,7 @@ Additional arguments for the command line interface:
 
 The test results may vary slightly (up to ±0.1) from those reported in the paper, depending on the hardware.
 ## Acknowledgement
-Codebase from [BoT](https://github.com/michuanhaohao/reid-strong-baseline) and [CLIP-ReID](https://github.com/Syliz517/CLIP-ReID/tree/master)
+Codebase from [BoT](https://github.com/michuanhaohao/reid-strong-baseline), [CLIP-ReID](https://github.com/Syliz517/CLIP-ReID/tree/master) and [FastReID](https://github.com/JDAI-CV/fast-reid.git)
 ## Citation
 
 If you use this code for your research, please cite
