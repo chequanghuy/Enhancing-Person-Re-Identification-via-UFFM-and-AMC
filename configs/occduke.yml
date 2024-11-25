@@ -17,8 +17,8 @@ INPUT:
   PADDING: 10
 
 DATASETS:
-  NAMES: ('market1501')
-  ROOT_DIR: '/home/ceec/huycq/track2_aicity_2021/lib/data/datasets'
+  NAMES: ('occ_duke')
+  ROOT_DIR: '/home/ceec/chuong/'
 
 DATALOADER:
   SAMPLER: 'softmax_triplet'
@@ -60,9 +60,11 @@ SOLVER:
 TEST:
   IMS_PER_BATCH: 128
   RE_RANKING: 'no'
-  WEIGHT: "/home/ceec/huycq/market_resnet50_model_120_rank1_945.pth"
-  # WEIGHT: "/home/ceec/chuong/CLIP-ReID/Market1501_baseline_RN50_120.pth"
+  WEIGHT: "/home/ceec/chuong/How-to-combine-similarity-metrics-for-ReID-problem/final_3_120.pth"
   NECK_FEAT: 'after'
   FEAT_NORM: 'yes'
+  LOAD_DATA: True
+  
 
+OUTPUT_DIR: ""
 

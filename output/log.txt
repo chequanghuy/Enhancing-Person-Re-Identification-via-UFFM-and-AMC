@@ -1,7 +1,7 @@
-2024-09-13 07:12:52,811 reid_baseline INFO: Using 1 GPUS
-2024-09-13 07:12:52,811 reid_baseline INFO: Namespace(baseline='clip', config_file='configs/market1501.yml', k=4, n_triple=1000, opts=[], out='output', seed=0, uffm_only=False)
-2024-09-13 07:12:52,811 reid_baseline INFO: Loaded configuration file configs/market1501.yml
-2024-09-13 07:12:52,811 reid_baseline INFO: 
+2024-11-25 08:41:19,233 reid_baseline INFO: Using 1 GPUS
+2024-11-25 08:41:19,233 reid_baseline INFO: Namespace(baseline='bot', config_file='configs/market1501.yml', k=4, n_triple=1000, opts=[], out='output', seed=0, uffm_only=False)
+2024-11-25 08:41:19,234 reid_baseline INFO: Loaded configuration file configs/market1501.yml
+2024-11-25 08:41:19,234 reid_baseline INFO: 
 MODEL:
   PRETRAIN_CHOICE: 'self'
   PRETRAIN_PATH: ''
@@ -64,14 +64,14 @@ SOLVER:
 TEST:
   IMS_PER_BATCH: 128
   RE_RANKING: 'no'
-  #WEIGHT: "/home/ceec/huycq/market_resnet50_model_120_rank1_945.pth"
-  WEIGHT: "/home/ceec/chuong/CLIP-ReID/Market1501_baseline_RN50_120.pth"
+  WEIGHT: "/home/ceec/huycq/market_resnet50_model_120_rank1_945.pth"
+  # WEIGHT: "/home/ceec/chuong/CLIP-ReID/Market1501_baseline_RN50_120.pth"
   NECK_FEAT: 'after'
   FEAT_NORM: 'yes'
 
 
 
-2024-09-13 07:12:52,812 reid_baseline INFO: Running with config:
+2024-11-25 08:41:19,234 reid_baseline INFO: Running with config:
 DATALOADER:
   NUM_INSTANCE: 4
   NUM_WORKERS: 8
@@ -141,15 +141,15 @@ TEST:
   METRICS: 
   NECK_FEAT: after
   RE_RANKING: no
-  WEIGHT: /home/ceec/chuong/CLIP-ReID/Market1501_baseline_RN50_120.pth
-2024-09-13 07:12:57,026 reid_baseline.inference INFO: Enter inferencing
-2024-09-13 07:13:06,273 reid_baseline.inference INFO: Coefficent Result:
-2024-09-13 07:13:06,273 reid_baseline.inference INFO: Score: 96.5%
-2024-09-13 07:13:06,273 reid_baseline.inference INFO: Alpha value: 0.36694963596161784
-2024-09-13 07:13:06,273 reid_baseline.inference INFO: Beta value: 2.1975889260133803
-2024-09-13 07:13:06,273 reid_baseline.inference INFO: Theta value: 7.013622861737287e-05
-2024-09-13 07:13:27,895 reid_baseline.inference INFO: Validation Results:
-2024-09-13 07:13:27,895 reid_baseline.inference INFO: mAP: 92.0%
-2024-09-13 07:13:27,895 reid_baseline.inference INFO: CMC curve, Rank-1  :95.8%
-2024-09-13 07:13:27,895 reid_baseline.inference INFO: CMC curve, Rank-5  :98.0%
-2024-09-13 07:13:27,895 reid_baseline.inference INFO: CMC curve, Rank-10 :98.6%
+  WEIGHT: /home/ceec/huycq/market_resnet50_model_120_rank1_945.pth
+2024-11-25 08:41:21,320 reid_baseline.inference INFO: Enter inferencing
+2024-11-25 08:41:28,891 reid_baseline.inference INFO: Coefficent Result:
+2024-11-25 08:41:28,891 reid_baseline.inference INFO: Score: 96.7%
+2024-11-25 08:41:28,891 reid_baseline.inference INFO: Alpha value: 0.45436426415112496
+2024-11-25 08:41:28,891 reid_baseline.inference INFO: Beta value: 2.361367475259785
+2024-11-25 08:41:28,891 reid_baseline.inference INFO: Theta value: -0.005834411811077963
+2024-11-25 08:41:45,652 reid_baseline.inference INFO: Validation Results:
+2024-11-25 08:41:45,652 reid_baseline.inference INFO: mAP: 91.0%
+2024-11-25 08:41:45,652 reid_baseline.inference INFO: CMC curve, Rank-1  :96.2%
+2024-11-25 08:41:45,652 reid_baseline.inference INFO: CMC curve, Rank-5  :98.2%
+2024-11-25 08:41:45,652 reid_baseline.inference INFO: CMC curve, Rank-10 :98.8%

@@ -1,8 +1,4 @@
 # encoding: utf-8
-"""
-@author:  liaoxingyu
-@contact: sherlockliao01@gmail.com
-"""
 
 import torch
 from torch import nn
@@ -173,25 +169,17 @@ class Baseline(nn.Module):
                 return global_feat
 
     def load_param(self, trained_path):
-        # print(trained_path)
+        '''
+            If you load the weight path from FastReID, use the code below:
+            param_dict = torch.load(trained_path, map_location='cuda:0')['model']
+        '''
         param_dict = torch.load(trained_path, map_location='cuda:0')
-        #param_dict = param_dict['model']
         param_dict_keys = param_dict.keys()
-        # print(param_dict['model'].keys())
-        # print(self.state_dict().keys())
         for i in param_dict:
-            #print(i)
-            # if 'classifier' in i:
-            #     continue
             if 'pixel' in i:
                 continue
             if 'state' in i:
                 continue
-                # if 'model' == i or 'optimizer' == i or 'scheduler' ==i or 'iteration' ==i:
-            #     continue
-            #print(self.state_dict()['model.0.weight'])
-            #self.state_dict()['base.' + i].copy_(param_dict[i])
-            #print(param_dict)
             self.state_dict()[i.replace('backbone.', 'base.').replace('heads.', '').replace('bnneck.', 'bottleneck.')].copy_(param_dict[i])
 
 class build_transformer(nn.Module):
