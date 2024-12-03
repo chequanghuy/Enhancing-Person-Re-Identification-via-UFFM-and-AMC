@@ -127,12 +127,12 @@ class R1_mAP(Metric):
             sum_sim_topk = torch.sum(sim_gg_topk, dim=-1)
             weight = sim_gg_topk / sum_sim_topk.view(-1, 1)
             
-            # Calculate the centroid of the top-k gallery features
+            # Calculate the refined features of the top-k gallery features
             gf_topk = gf_new[sim_gg_argtopk]
             gf_topk_p = gf_topk.permute(0, 2, 1)
             centroid_g = torch.bmm(gf_topk_p, weight.unsqueeze(-1)).squeeze()
 
-            # Store centroid and camera ID's contextual cross-entropy value
+            # Store centroid and camera ID's CCE value
             cce[indx] = self.CCE(indx, g_camids)
             dict_umvf[indx] = centroid_g
             print(f"\rNumber of Camera ID done: {indx + 1}/{num_camid_q}", end="")
