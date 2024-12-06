@@ -1,8 +1,5 @@
 # Enhancing Person Re-Identification via Uncertainty Feature Fusion and Auto-weighted Measure Combination
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhancing-person-re-identification-via/person-re-identification-on-market-1501)](https://paperswithcode.com/sota/person-re-identification-on-market-1501?p=enhancing-person-re-identification-via)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhancing-person-re-identification-via/person-re-identification-on-occluded-dukemtmc)](https://paperswithcode.com/sota/person-re-identification-on-occluded-dukemtmc?p=enhancing-person-re-identification-via)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhancing-person-re-identification-via/person-re-identification-on-msmt17)](https://paperswithcode.com/sota/person-re-identification-on-msmt17?p=enhancing-person-re-identification-via)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/enhancing-person-re-identification-via/person-re-identification-on-dukemtmc-reid)](https://paperswithcode.com/sota/person-re-identification-on-dukemtmc-reid?p=enhancing-person-re-identification-via)
+
 
 
 ## Pipeline
