@@ -1,6 +1,11 @@
-# Enhancing Person Re-Identification via Uncertainty Feature Fusion and Auto-weighted Measure Combination
+# ReID: Uncertainty Feature Fusion & K-NN Weighted Re-Ranking
+
+Based on the following works:
+- **Enhancing Person Re-Identification via Uncertainty Feature Fusion and Auto-weighted Measure Combination** [[paper]](https://www.sciencedirect.com/science/article/abs/pii/S0950705124013716?via%3Dihub)
+- **A Re-Ranking Method Using K-Nearest Weighted Fusion for Person Re-Identification** [[paper]](https://www.scitepress.org/Link.aspx?doi=10.5220/0013176100003905)
+
 ## Pipeline
-![](images/reidpipe_.png)
+![Pipeline](images/reidpipe_.png)
 ## Prerequisites
 
 Before running the script, make sure you have the following dependencies installed:
@@ -51,6 +56,7 @@ python3 tools/test.py --config_file='configs/market1501.yml' --seed 0 --k 4 --n_
 - `--k`: Top-k similarity based on uncertainty. Default is 5.
 - `--n_triple`: Number of data triples used for training. Default is 1000.
 - `--seed`: Set a specific random seed for reproducibility. Default is 0.
+- `--re_rank`: Rerank using KwF: "none", "uniform", "inv_dist_pow" or "exp_decay". Default is "none"
 
 Additional arguments for the command line interface:
 - `--uffm_only`: Use this flag to only apply the Uncertain Feature Fusion Method (UFFM).
@@ -77,6 +83,24 @@ author = {Quang-Huy Che and Le-Chuong Nguyen and Duc-Tuan Luu and Vinh-Tiep Nguy
 }
 
 ```
+and
+
+```ref
+@conference{icpram25,
+author={Quang{-}Huy Che and Le{-}Chuong Nguyen and Gia{-}Nghia Tran and Dinh{-}Duy Phan and Vinh{-}Tiep Nguyen},
+title={A Re-Ranking Method Using K-Nearest Weighted Fusion for Person Re-Identification},
+booktitle={Proceedings of the 14th International Conference on Pattern Recognition Applications and Methods - ICPRAM},
+year={2025},
+pages={79-90},
+publisher={SciTePress},
+organization={INSTICC},
+doi={10.5220/0013176100003905},
+isbn={978-989-758-730-6},
+issn={2184-4313},
+}
+
+```
+
   
 
 

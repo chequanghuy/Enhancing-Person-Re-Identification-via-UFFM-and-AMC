@@ -96,7 +96,7 @@ def inference(
     logger = logging.getLogger("reid_baseline.inference")
     logger.info("Enter inferencing")
     alpha, beta, theta = 0.0, 0.0, 0.0
-    if not args.uffm_only:
+    if not args.uffm_only and args.re_rank == 'none':
         print("Create trainer for coeff...")
 
         coeff_trainer = create_supervised_coeff(model, metrics={'Coeff': Coeff(num_query, feat_norm=cfg.TEST.FEAT_NORM, \

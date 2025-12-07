@@ -60,7 +60,8 @@ SOLVER:
 TEST:
   IMS_PER_BATCH: 128
   RE_RANKING: 'no'
-  WEIGHT: "/home/ceec/huycq/duke_resnet50_model_120_rank1_864.pth"
+  # WEIGHT: "/home/ceec/huycq/duke_resnet50_model_120_rank1_864.pth"
+  WEIGHT: "Duke_baseline_RN50_120.pth"
   NECK_FEAT: 'after'
   FEAT_NORM: 'yes'
 

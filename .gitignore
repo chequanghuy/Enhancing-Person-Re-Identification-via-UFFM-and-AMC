@@ -1,0 +1,121 @@
+# =========================================================
+# Python
+# =========================================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.pickle
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# Cython / C extensions
+*.c
+*.cpp
+*.cu
+*.cuh
+build/
+*.egg-info/
+dist/
+
+# =========================================================
+# Virtual Environments
+# =========================================================
+.env
+.venv
+venv/
+env/
+*.swp
+
+# Conda environment folders
+conda/
+*/conda-meta/
+
+# =========================================================
+# Jupyter Notebook
+# =========================================================
+.ipynb_checkpoints
+*.ipynb~
+
+# =========================================================
+# Logs & Debug
+# =========================================================
+*.log
+logs/
+wandb/
+tb_logs/
+tensorboard/
+events.out.tfevents.*
+.debug/
+
+# =========================================================
+# Machine Learning Outputs
+# =========================================================
+# Model checkpoints / weights
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.tflite
+*.h5
+*.pb
+
+checkpoints/
+output/
+outputs/
+results/
+runs/
+experiments/
+
+# =========================================================
+# Datasets (optional — uncomment if you don't want datasets in repo)
+# =========================================================
+# data/
+# datasets/
+# *.zip
+# *.tar
+# *.tar.gz
+
+# =========================================================
+# Images / Large Files
+# =========================================================
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
+*.mp4
+*.avi
+
+# allow documentation images:
+!docs/**/*.png
+!docs/**/*.jpg
+!images/**/*.png
+!images/**/*.jpg
+
+# =========================================================
+# IDE / Editor
+# =========================================================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =========================================================
+# OS Files
+# =========================================================
+.DS_Store
+Thumbs.db
+
+# =========================================================
+# Custom project-specific ignores (add your own below)
+# =========================================================
+
+# Example: Ignore local config, secrets
+local_config.yaml
+*.secret

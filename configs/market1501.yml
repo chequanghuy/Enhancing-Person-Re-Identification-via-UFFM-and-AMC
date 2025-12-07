@@ -60,8 +60,8 @@ SOLVER:
 TEST:
   IMS_PER_BATCH: 128
   RE_RANKING: 'no'
-  WEIGHT: "/home/ceec/huycq/market_resnet50_model_120_rank1_945.pth"
-  # WEIGHT: "/home/ceec/chuong/CLIP-ReID/Market1501_baseline_RN50_120.pth"
+  # WEIGHT: "/home/ceec/huycq/market_resnet50_model_120_rank1_945.pth"
+  WEIGHT: "Market1501_baseline_RN50_120.pth"
   NECK_FEAT: 'after'
   FEAT_NORM: 'yes'
 

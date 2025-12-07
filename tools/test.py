@@ -29,7 +29,7 @@ np.random.seed(1)
 def main():
     parser = argparse.ArgumentParser(description="ReID Baseline Inference")
     parser.add_argument(
-        "--config_file", default="configs/softmax_triplet_with_center.yml", help="path to config file", type=str
+        "--config_file", default="configs/market1501.yml", help="path to config file", type=str
     )
     parser.add_argument("opts", help="Modify config options using the command-line", default=None,
                         nargs=argparse.REMAINDER)
@@ -37,6 +37,7 @@ def main():
     parser.add_argument('--k', nargs='?', type=int, default=5, help='Top-k similarity base on uncertainty')
     parser.add_argument('--n_triple', nargs='?', type=int, default=1000, help='Number of data to train to find coefficent')
     parser.add_argument('--seed', nargs='?', type=int, default=0, help='random_seed')
+    parser.add_argument("--re_rank", type=str, help="Choose the method: [\"none\", \"uniform\", \"inv_dist_pow\", \"exp_decay\"]", default="none")
     parser.add_argument('--uffm_only', action='store_true', help=' only using UFFM')
     parser.add_argument("--out", type=str, help="Save dir", default="output")
 
