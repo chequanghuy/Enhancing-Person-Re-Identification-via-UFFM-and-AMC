@@ -83,11 +83,9 @@ author = {Quang-Huy Che and Le-Chuong Nguyen and Duc-Tuan Luu and Vinh-Tiep Nguy
 }
 
 ```
-and
-
 ```ref
 @conference{icpram25,
-author={Quang{-}Huy Che and Le{-}Chuong Nguyen and Gia{-}Nghia Tran and Dinh{-}Duy Phan and Vinh{-}Tiep Nguyen},
+author={Quang-Huy Che and Le-Chuong Nguyen and Gia-Nghia Tran and Dinh-Duy Phan and Vinh-Tiep Nguyen},
 title={A Re-Ranking Method Using K-Nearest Weighted Fusion for Person Re-Identification},
 booktitle={Proceedings of the 14th International Conference on Pattern Recognition Applications and Methods - ICPRAM},
 year={2025},
