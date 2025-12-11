@@ -111,7 +111,7 @@ class R1_mAP(Metric):
         qf, gf = qf.cuda(), gf.cuda()
 
         for i in range(len(q_ids)):
-            print(f'\r{i}', end='')
+            # print(f'\r{i}', end='')
             curr_camid = q_camids[i]
             ind_qcamid = camid2idx[curr_camid] # index of gallery feature has camid = q_camid
             ind_exq = np.setdiff1d(index_g, ind_qcamid) #index of gallery exp camid = q_camid
@@ -120,7 +120,6 @@ class R1_mAP(Metric):
             qg_argsort =  torch.argsort(1-sim_qg, dim = 1)
             #arange_1 = torch.arange(sim_qg.size(0)).unsqueeze(1)
             qg_arg_argsort = torch.argsort(qg_argsort, dim = 1)
-            #print()
 
             qg_argsort_tp = qg_argsort[:, :k1].squeeze()
             qg_argsort_tail = qg_argsort[:, k1:].squeeze()
@@ -132,13 +131,14 @@ class R1_mAP(Metric):
 
             arange_ = torch.arange(sim_ggtop.size(0)).unsqueeze(1)
             sim_gg_topk = sim_ggtop[arange_, ggtop_as_tp] #top_k sim
-            sum_sim_topk = torch.sum(sim_gg_topk, dim=-1)
             if self.re_rank == 'uniform':
-                weight = sim_gg_topk /sum_sim_topk.view(-1, 1)
+                weight = torch.ones_like(sim_gg_topk) / k2
+            elif self.re_rank == 'sim':
+                weight = sim_gg_topk / torch.sum(sim_gg_topk, dim=-1).view(-1, 1)
             elif self.re_rank == 'inv_dist_pow':
                 weight = (1/(1 - sim_gg_topk)**2) / torch.sum(1/(1 - sim_gg_topk)**2, dim=-1).view(-1, 1)
             elif self.re_rank == 'exp_decay':
-                weight = torch.exp(sim_gg_topk) / torch.sum(torch.exp(sim_gg_topk), dim=-1).view(-1, 1)
+                weight = torch.exp(-(1-sim_gg_topk)) / torch.sum(torch.exp(-(1-sim_gg_topk)), dim=-1).view(-1, 1)
             gf_topk =  gf_new[ggtop_as_tp]
             gf_topk_p = gf_topk.permute(0, 2, 1)
             centroid_g_top = torch.bmm(gf_topk_p, weight.unsqueeze(-1)).squeeze()
@@ -186,10 +186,9 @@ class R1_mAP(Metric):
 
             # Calculate weights for the top-k gallery features
             sim_gg_topk = sim_gg_exq[torch.arange(sim_gg_exq.size(0)).unsqueeze(1), sim_gg_argtopk] 
-            distances_topk = 1 - sim_gg_topk
-            sum_sim_topk = torch.sum(1/torch.pow(distances_topk, 2), dim=-1)
-            weight = 1/torch.pow(distances_topk, 2) / sum_sim_topk.view(-1, 1)
-
+            sum_sim_topk = torch.sum(sim_gg_topk, dim=-1)
+            weight = sim_gg_topk / sum_sim_topk.view(-1, 1)
+            
             # Calculate the centroid of the top-k gallery features
             gf_topk = gf_new[sim_gg_argtopk]
             gf_topk_p = gf_topk.permute(0, 2, 1)

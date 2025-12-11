@@ -19,7 +19,7 @@ And other additional dependencies and version requirements:
 pip install -r requirements.txt
 ```
 
-Compile with cython to accelerate evalution:
+Compile with cython to accelerate evaluation:
 ```bash
 cd utils/rank_cylib; make all
 ```
